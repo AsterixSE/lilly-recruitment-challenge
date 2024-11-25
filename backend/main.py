@@ -125,6 +125,21 @@ def delete_med(name: str = Form(...)):
     return {"error": "Medicine not found"}
 
 # Add your average function here
+@app.get("/average-price")
+def calculate_average_price():
+    """
+    Calculate and return the average price of all medicines.
+    """
+    data = get_all_meds()
+    medicines = data.get("medicines", [])
+    valid_prices = [med.get("price") for med in medicines if isinstance(med.get("price"), (int, float)) and med.get("price") is not None]
+    
+    if not valid_prices:
+        return {"error": "No valid prices found to calculate average."}
+
+    average_price = sum(valid_prices) / len(valid_prices)
+    return {"average_price": round(average_price, 2)}
+
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)

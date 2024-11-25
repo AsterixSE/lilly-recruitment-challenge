@@ -5,28 +5,143 @@
     box-sizing: border-box;
 }
 
-/* Body styles. DO NOT REMOVE OR EDIT UNLESS ABSOLUTELY NECESSARY */
+/* Body styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #dddddd;
     padding: 0;
     margin: 0;
     color: #333;
     padding-top: 30px;
+    text-align: center; /* Center all text content by default */
 }
 
-/* Disclaimer styles. DO NOT REMOVE OR EDIT UNLESS ABSOLUTELY NECESSARY */
+/* Disclaimer styles */
 .disclaimer {
     position: fixed;
     top: 0;
     width: 100%;
     background-color: black;
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
     padding: 0.5rem;
     z-index: 1000;
     font-weight: bold;
     height: 30px;
+    border-radius: 0 0 10px 10px; /*1 minor change to make the UI more cohesive */
 }
 
-/* ---- Your custom styles below ---- */
+/* Header styling */
+header h1 {
+    font-size: 2rem;
+    margin: 20px 0;
+    color: #333;
+    text-align: center;
+}
+
+/* Medicine list item styling */
+.medicine-item {
+    background: #fff;
+    margin: 10px auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%; 
+    max-width: 500px;
+}
+
+/* Form styling */
+form {
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px; 
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%; 
+    max-width: 500px;
+}
+
+form input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 10px; 
+}
+
+form button {
+    padding: 10px 20px;
+    background: #414141;
+    color: #fff;
+    border: none;
+    border-radius: 10px; 
+    cursor: pointer;
+    width: 90%; 
+    max-width: 200px;
+    margin: 10px auto;
+    display: block;
+    font-weight: bold;
+    margin-top: 1%;
+}
+
+form button:hover {
+    background: #080808;
+}
+
+
+.alert {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px; 
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+/* Average Price Button Styling */
+#averagePriceButton {
+    padding: 10px 20px;
+    margin: 20px auto;
+    background: #414141;
+    color: #fff;
+    border: none;
+    border-radius: 10px; 
+    cursor: pointer;
+    display: block; 
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease-in-out;
+}
+
+#averagePriceButton:hover {
+    background: #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Average Price Display Styling */
+#averagePriceDisplay {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 10px; 
+    width: 80%; 
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

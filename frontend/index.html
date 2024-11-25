@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Medicine Tracker</title>
+    <link rel="stylesheet" href="style.css">   
 </head>
 <body>
     <div class="disclaimer" id="disclaimer">
@@ -14,7 +14,14 @@
         <h1>Medicine Tracker</h1>
     </header>
     <main>
-
+        <form id="addMedicineForm">
+            <input type="text" id="medName" placeholder="Medicine Name" required>
+            <input type="float" id="medPrice" placeholder="Price" required>
+            <button type="submit">Add Medicine</button>
+        </form>
+        <div id="medicineList"></div>
+        <button id="averagePriceButton">Calculate Average Price</button>
+    <p id="averagePriceDisplay">Price Average</p>
     </main>
     <script src="script.js"></script>
 </body>
